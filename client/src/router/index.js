@@ -5,7 +5,8 @@ import dashboard from "@/views/dashboard";
 import login from "@/views/login";
 import signup from "@/views/signup";
 import feed from "@/views/feed";
-import stream from '@/views/stream'
+import notfound from "@/views/404";
+import contact from '@/views/contact'
 
 const routes = [
 	{
@@ -29,6 +30,11 @@ const routes = [
 		component: signup,
 	},
 	{
+		path: "/contact-us",
+		name: "contactUs",
+		component: contact,
+	},
+	{
 		path: "/passwordReset",
 		name: "passwordReset",
 		component: forgotPassword,
@@ -38,10 +44,12 @@ const routes = [
 		name: "feed",
 		component: feed,
 	},
+
+	// catch all unregistered routes
 	{
-		path: "/user/feed/stream",
-		name: "stream",
-		component: stream,
+		path: "/:pathMatch(.*)*",
+		name: "notfound",
+		component: notfound,
 	},
 ];
 

@@ -9,7 +9,7 @@
 					<li><i class="uil uil-chart-line"></i>Feeds</li>
 				</router-link>
 
-				<li><i class="uil uil-envelope"></i>Menu</li>
+
 				<li><i class="uil uil-exclamation-triangle"></i>Report an issue</li>
 				<li><i class="uil uil-setting"></i>Settings</li>
 			</ul>
@@ -90,7 +90,24 @@
 					<div class="balance">
 						<div class="balance-details">
 							<ul class="details">
-								<li class="topic">Date</li>
+								<li class="topic">football</li>
+								<li><a href="#">manchester derby</a></li>
+								<li><a href="#">liverpool vs real madrid</a></li>
+								<li><a href="#">23-05-2022</a></li>
+								<li><a href="#">24-05-2022</a></li>
+								<li><a href="#">25-05-2022</a></li>
+								<li><a href="#">26-05-2022</a></li>
+								<li><a href="#">27-05-2022</a></li>
+								<li><a href="#">28-05-2022</a></li>
+								<li><a href="#">29-05-2022</a></li>
+								<li><a href="#">01-06-2022</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="balance">
+						<div class="balance-details">
+							<ul class="details">
+								<li class="topic">tennis</li>
 								<li><a href="#">21-05-2022</a></li>
 								<li><a href="#">22-05-2022</a></li>
 								<li><a href="#">23-05-2022</a></li>
@@ -107,7 +124,7 @@
 					<div class="balance">
 						<div class="balance-details">
 							<ul class="details">
-								<li class="topic">Date</li>
+								<li class="topic">basket ball</li>
 								<li><a href="#">21-05-2022</a></li>
 								<li><a href="#">22-05-2022</a></li>
 								<li><a href="#">23-05-2022</a></li>
@@ -124,24 +141,7 @@
 					<div class="balance">
 						<div class="balance-details">
 							<ul class="details">
-								<li class="topic">Date</li>
-								<li><a href="#">21-05-2022</a></li>
-								<li><a href="#">22-05-2022</a></li>
-								<li><a href="#">23-05-2022</a></li>
-								<li><a href="#">24-05-2022</a></li>
-								<li><a href="#">25-05-2022</a></li>
-								<li><a href="#">26-05-2022</a></li>
-								<li><a href="#">27-05-2022</a></li>
-								<li><a href="#">28-05-2022</a></li>
-								<li><a href="#">29-05-2022</a></li>
-								<li><a href="#">01-06-2022</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="balance">
-						<div class="balance-details">
-							<ul class="details">
-								<li class="topic">Date</li>
+								<li class="topic">swimming</li>
 								<li><a href="#">21-05-2022</a></li>
 								<li><a href="#">22-05-2022</a></li>
 								<li><a href="#">23-05-2022</a></li>
@@ -159,7 +159,7 @@
 			</div>
 		</div>
 	</div>
-	<router-view />
+
 	<slot />
 </template>
 
@@ -297,6 +297,8 @@
 	}
 
 	.balance {
+		display: flex;
+		justify-content: center;
 		width: 437px;
 		margin: 20px 0px 0px 45px;
 		background: rgba(255, 255, 255, 0.21);
@@ -306,8 +308,11 @@
 	}
 
 	.topic {
-		font-size: 25px;
+		font-size: 20px;
 		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		text-decoration: underline;
 	}
 
 	.balance-details li {
@@ -320,5 +325,10 @@
 		color: rgba(0, 0, 0, 0.277);
 		font-weight: bold;
 		text-decoration: none;
+	}
+
+	.balance-details li a:hover {
+		text-decoration: underline;
+		color: palevioletred;
 	}
 </style>

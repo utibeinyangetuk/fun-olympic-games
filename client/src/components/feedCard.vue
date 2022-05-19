@@ -31,8 +31,6 @@
 </script>
 <style scoped>
 	.card {
-		display: flex;
-		justify-content: center;
 		height: 830px;
 		width: 100%;
 		padding: 20px;
