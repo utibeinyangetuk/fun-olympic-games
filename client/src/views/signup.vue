@@ -13,7 +13,7 @@
 								required
 								v-model="username"
 							/>
-							<i class="uil uil-user"/>
+							<i class="uil uil-user" />
 						</div>
 						<div class="input-field">
 							<input
@@ -62,8 +62,6 @@
 				email: "",
 				password: "",
 				confirmPassword: "",
-				errorMsg: [],
-				successMsg: [],
 			};
 		},
 		methods: {},
