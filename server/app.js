@@ -2,7 +2,6 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
-const path = require("path");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const { pool } = require("./database/dbconfig");
@@ -11,9 +10,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const session = require("express-session");
 
-const knex = require("./database/knexdb");
-
-// middlewares
+//setting up middlewares
 dotenv.config();
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
@@ -35,8 +32,7 @@ app.use(passport.authenticate("session"));
 app.use(passport.initialize());
 app.use(passport.session());
 
-// setting up strategy
-
+// setting up passport strategy
 const authenticateuser = (email, password, done) => {
 	pool.query(`select * from users where email=$1`, [email], (err, results) => {
 		if (err) {
@@ -44,10 +40,13 @@ const authenticateuser = (email, password, done) => {
 		}
 		if (results.rows.length > 0) {
 			const user = results.rows[0];
+			// use bcrypt to compare the saved password with the one typed by the user
 			bcrypt.compare(password, user.password, (err, isMatch) => {
+				// wrong password
 				if (err) {
 					throw err;
 				}
+				// correct password
 				if (isMatch) {
 					return done(null, user);
 				} else {
@@ -59,6 +58,8 @@ const authenticateuser = (email, password, done) => {
 		}
 	});
 };
+
+// use the localStrategy to check the user's input
 passport.use(
 	new LocalStrategy(
 		{
@@ -78,12 +79,9 @@ passport.deserializeUser((id, done) => {
 		}
 	});
 });
+// End of passport strategy
 
 // routes
-// app.get("/*", (req, res) => {
-// 	res.sendFile(path.join(__dirname, "../client/public/index.html"));
-// });
-
 // login route
 app.post("/api/users/login", async (req, res, next) => {
 	passport.authenticate("local", (err, user, info) => {
@@ -108,6 +106,7 @@ app.post("/api/users/signup", async (req, res) => {
 		let hashedPassword = await bcrypt.hash(password, 10);
 
 		pool.query(
+			// checking database to see if the user exists
 			`SELECT * FROM users WHERE email = $1`,
 			[email],
 			(error, results) => {
@@ -116,19 +115,15 @@ app.post("/api/users/signup", async (req, res) => {
 				} else {
 					if (results.rows.length > 0) {
 						res.send({ error: " Email already exist." });
-						console.log({ error: " Email taken" });
 					} else {
 						pool.query(
+							// if user doesn't exist, then register the user
 							`INSERT INTO users (username,email,password) VALUES ($1,$2,$3)`,
 							[username, email, hashedPassword],
 							(err, results) => {
 								if (err) {
 									throw err;
 								}
-
-								console.log(
-									"Registration successful.Please hold while you are being redirected."
-								);
 								res.send({
 									success: "Registration successful.",
 								});
@@ -143,14 +138,14 @@ app.post("/api/users/signup", async (req, res) => {
 	}
 });
 
-// logout
-app.get("/api/user/logout", function (req, res, next) {
+// logout route
+app.get("/api/user/logout", function (req, res) {
 	req.logout();
 	console.log("logged out");
 	res.send("you have been logged out");
 });
 
-// server
+// start the server
 app.listen(process.env.PORT, () => {
 	console.log(`server running on http://localhost:${process.env.PORT}/`);
 });
