@@ -9,7 +9,6 @@
 					<li><i class="uil uil-chart-line"></i>Feeds</li>
 				</router-link>
 
-
 				<li><i class="uil uil-exclamation-triangle"></i>Report an issue</li>
 				<li><i class="uil uil-setting"></i>Settings</li>
 			</ul>
@@ -19,11 +18,10 @@
 			<div class="head">
 				<div class="head-title">
 					<h2>Dashboard</h2>
-					<span>welcome {{ user }}</span>
 				</div>
 
 				<div class="logout">
-					<button>Logout</button>
+					<button @click="logout">Logout</button>
 				</div>
 			</div>
 
@@ -164,13 +162,22 @@
 </template>
 
 <script>
+	import axios from "axios";
 	export default {
 		name: "dashboard",
-
-		data() {
-			return {
-				user: null,
-			};
+		methods: {
+			async logout() {
+				await axios
+					.get("/api/user/logout")
+					.then((response) => {
+						if (response) {
+							this.$router.push("/");
+						}
+					})
+					.catch((err) => {
+						throw err;
+					});
+			},
 		},
 	};
 </script>
@@ -216,10 +223,6 @@
 		padding: 20px 30px;
 	}
 	.head h2 {
-		letter-spacing: 2px;
-	}
-	.head-title span {
-		font-size: 14px;
 		letter-spacing: 2px;
 	}
 

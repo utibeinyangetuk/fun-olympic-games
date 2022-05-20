@@ -11,6 +11,8 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const session = require("express-session");
 
+const knex = require("./database/knexdb");
+
 // middlewares
 dotenv.config();
 app.use(bodyParser.json());
@@ -78,9 +80,9 @@ passport.deserializeUser((id, done) => {
 });
 
 // routes
-app.get("/*", (req, res) => {
-	res.sendFile(path.join(__dirname, "index.html"));
-});
+// app.get("/*", (req, res) => {
+// 	res.sendFile(path.join(__dirname, "../client/public/index.html"));
+// });
 
 // login route
 app.post("/api/users/login", async (req, res, next) => {
@@ -91,11 +93,9 @@ app.post("/api/users/login", async (req, res, next) => {
 		// throw error if credentials are wrong
 		if (!user) {
 			console.log("Bad Credentials");
-			return res.status(400).send([user, "Access Denied", info]);
+			return res.send({ error: "Invalid email or password" });
 		} else {
-			console.log(user);
-			console.log(`welcome ${user.username}`);
-			res.send("welcome " + user.username);
+			res.send({ success: "you have been logged in" });
 		}
 	})(req, res, next);
 });
@@ -115,8 +115,8 @@ app.post("/api/users/signup", async (req, res) => {
 					throw error;
 				} else {
 					if (results.rows.length > 0) {
-						res.status(500).send({ error: " Email already exist!" });
-						console.log({ error: " Email already exist!" });
+						res.send({ error: " Email already exist." });
+						console.log({ error: " Email taken" });
 					} else {
 						pool.query(
 							`INSERT INTO users (username,email,password) VALUES ($1,$2,$3)`,
@@ -126,13 +126,11 @@ app.post("/api/users/signup", async (req, res) => {
 									throw err;
 								}
 
-								res.status(200).send({
-									success:
-										"You are now registered.Please hold while you are being redirected.",
-								});
-								console.log({
-									success:
-										"You are now registered.Please hold while you are being redirected.",
+								console.log(
+									"Registration successful.Please hold while you are being redirected."
+								);
+								res.send({
+									success: "Registration successful.",
 								});
 							}
 						);
@@ -146,10 +144,10 @@ app.post("/api/users/signup", async (req, res) => {
 });
 
 // logout
-app.get("/api/users/logout", function (req, res, next) {
+app.get("/api/user/logout", function (req, res, next) {
 	req.logout();
 	console.log("logged out");
-	return res.send();
+	res.send("you have been logged out");
 });
 
 // server
