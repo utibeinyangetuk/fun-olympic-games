@@ -5,7 +5,7 @@
 				<div class="form login">
 
 <div class="message">
-<p v-if="message">{{message}}</p>
+<p v-if="message">{{message.error || message.success}}</p>
 </div>
 					<span class="title">LOGIN </span>
 
@@ -61,15 +61,17 @@
 				await axios
 					.post("/api/users/login", userData)
 					.then((response,error) => {
-						// FIXME: style error messages
-						if (response & !error) {
+						// FIXME: Get response data from the server and display it
+						if (response.data.success) {
 							this.message=response.data
 							setTimeout(() => {
 								this.$router.push("/user/dashboard");
 							}, 3000);
 
-						} else {
+						} else if(response.data.error) {
 							this.message=response.data
+							this.$router.push('/login')
+							
 						}
 					})
 					.catch((e) => {
