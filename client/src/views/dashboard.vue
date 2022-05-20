@@ -26,54 +26,52 @@
 			</div>
 
 			<div class="main-board">
-				<marquee direction="right">
-					<div class="card-board">
-						<div class="card">
-							<div class="card-icon">
-								<i class="uil uil-chart-line"></i>
-								<i class="uil uil-ellipsis-v"></i>
-							</div>
-
-							<span>Ongoing Games...</span>
-							<div class="button">
-								<button>view</button>
-							</div>
+				<div class="card-board">
+					<div class="card">
+						<div class="card-icon">
+							<i class="uil uil-chart-line"></i>
+							<i class="uil uil-ellipsis-v"></i>
 						</div>
-						<div class="card">
-							<div class="card-icon">
-								<i class="uil uil-chart-line"></i>
-								<i class="uil uil-ellipsis-v"></i>
-							</div>
 
-							<span>Ongoing Games...</span>
-							<div class="button">
-								<button>view</button>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-icon">
-								<i class="uil uil-chart-line"></i>
-								<i class="uil uil-ellipsis-v"></i>
-							</div>
-
-							<span>Ongoing Games...</span>
-							<div class="button">
-								<button>view</button>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-icon">
-								<i class="uil uil-chart-line"></i>
-								<i class="uil uil-ellipsis-v"></i>
-							</div>
-
-							<span>Ongoing Games...</span>
-							<div class="button">
-								<button>view</button>
-							</div>
+						<span>Ongoing Games...</span>
+						<div class="button">
+							<button>view</button>
 						</div>
 					</div>
-				</marquee>
+					<div class="card">
+						<div class="card-icon">
+							<i class="uil uil-chart-line"></i>
+							<i class="uil uil-ellipsis-v"></i>
+						</div>
+
+						<span>Ongoing Games...</span>
+						<div class="button">
+							<button>view</button>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-icon">
+							<i class="uil uil-chart-line"></i>
+							<i class="uil uil-ellipsis-v"></i>
+						</div>
+
+						<span>Ongoing Games...</span>
+						<div class="button">
+							<button>view</button>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-icon">
+							<i class="uil uil-chart-line"></i>
+							<i class="uil uil-ellipsis-v"></i>
+						</div>
+
+						<span>Ongoing Games...</span>
+						<div class="button">
+							<button>view</button>
+						</div>
+					</div>
+				</div>
 
 				<div class="head">
 					<div class="head-title">
@@ -270,7 +268,7 @@
 		padding: 8px 30px;
 		border-radius: 5px;
 		border: 1px solid rgba(128, 128, 128, 0.486);
-		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 		letter-spacing: 2px;
 		font-size: 15px;
 		font-weight: bold;
@@ -305,7 +303,7 @@
 		width: 437px;
 		margin: 20px 0px 0px 45px;
 		background: rgba(255, 255, 255, 0.21);
-		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 		padding: 20px 30px;
 		border-radius: 5px;
 	}
