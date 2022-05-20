@@ -3,12 +3,10 @@
 		<div class="container">
 			<div class="forms">
 				<div class="form login">
-
-<div class="message">
-<p v-if="message">{{message.error || message.success}}</p>
-</div>
+					<div class="message">
+						<p v-if="message">{{ message.error || message.success }}</p>
+					</div>
 					<span class="title">LOGIN </span>
-
 
 					<form @submit.prevent="LOGIN">
 						<div class="input-field">
@@ -48,7 +46,7 @@
 			return {
 				email: "",
 				password: "",
-				message:''
+				message: "",
 			};
 		},
 		methods: {
@@ -60,18 +58,16 @@
 
 				await axios
 					.post("/api/users/login", userData)
-					.then((response,error) => {
+					.then((response, error) => {
 						// FIXME: Get response data from the server and display it
 						if (response.data.success) {
-							this.message=response.data
+							this.message = response.data;
 							setTimeout(() => {
 								this.$router.push("/user/dashboard");
 							}, 3000);
-
-						} else if(response.data.error) {
-							this.message=response.data
-							this.$router.push('/login')
-							
+						} else if (response.data.error) {
+							this.message = response.data;
+							this.$router.push("/login");
 						}
 					})
 					.catch((e) => {

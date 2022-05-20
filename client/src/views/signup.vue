@@ -3,6 +3,10 @@
 		<div class="container">
 			<div class="forms">
 				<div class="form login">
+					<div class="message">
+						<p v-if="message">{{ message.error || message.success }}</p>
+					</div>
+
 					<span class="title">Signup </span>
 
 					<form @submit.prevent="register">
@@ -63,6 +67,7 @@
 				email: "",
 				password: "",
 				confirmPassword: "",
+				message: "",
 			};
 		},
 		methods: {
@@ -76,12 +81,16 @@
 
 				await axios
 					.post("/api/users/signup", userData)
-					.then((res, error) => {
+					.then((response, error) => {
 						// FIXME: Get response data from the server and display it
-						if (!error) {
-							this.$router.push("/user/dashboard");
-						} else {
-							throw error;
+						if (response.data.success) {
+							this.message = response.data;
+							setTimeout(() => {
+								this.$router.push("/user/dashboard");
+							}, 3000);
+						} else if (response.data.error) {
+							this.message = response.data;
+							this.$router.push("/signup");
 						}
 					})
 					.catch((e) => {
