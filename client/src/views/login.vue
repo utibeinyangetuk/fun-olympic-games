@@ -5,12 +5,13 @@
 				<div class="form login">
 					<span class="title">LOGIN </span>
 
-					<form>
+					<form @submit.prevent="LOGIN">
 						<div class="input-field">
 							<input
 								type="text"
 								placeholder="Enter your email"
 								v-model="email"
+								required
 							/>
 							<i class="uil uil-envelope"></i>
 						</div>
@@ -20,6 +21,7 @@
 								type="password"
 								placeholder="Enter your password"
 								v-model="password"
+								required
 							/>
 							<i class="uil uil-lock"></i>
 						</div>
@@ -35,13 +37,35 @@
 </template>
 
 <script>
+	import axios from "axios";
 	export default {
 		data() {
 			return {
-				errors: [],
 				email: "",
 				password: "",
 			};
+		},
+		methods: {
+			async LOGIN() {
+				const userData = {
+					email: this.email,
+					password: this.password,
+				};
+
+				await axios
+					.post("/api/users/login", userData)
+					.then((res,error) => {
+						// FIXME: Get response data from the server and display it
+						if (!error) {
+							this.$router.push("/user/dashboard");
+						} else {
+							throw error;
+						}
+					})
+					.catch((e) => {
+						throw e;
+					});
+			},
 		},
 
 		name: "login",

@@ -5,7 +5,7 @@
 				<div class="form login">
 					<span class="title">Signup </span>
 
-					<form>
+					<form @submit.prevent="register">
 						<div class="input-field">
 							<input
 								type="text"
@@ -54,6 +54,7 @@
 </template>
 
 <script>
+	import axios from "axios";
 	export default {
 		name: "signup",
 		data() {
@@ -64,7 +65,30 @@
 				confirmPassword: "",
 			};
 		},
-		methods: {},
+		methods: {
+			async register() {
+				const userData = {
+					username: this.username,
+					email: this.email,
+					password: this.password,
+					confirmPassword: this.confirmPassword,
+				};
+
+				await axios
+					.post("/api/users/signup", userData)
+					.then((res, error) => {
+						// FIXME: Get response data from the server and display it
+						if (!error) {
+							this.$router.push("/user/dashboard");
+						} else {
+							throw error;
+						}
+					})
+					.catch((e) => {
+						throw e;
+					});
+			},
+		},
 	};
 </script>
 
