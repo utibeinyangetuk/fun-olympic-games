@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h3>you do not contact us, we contact you!</h3>
+		<h3>Our developers are still working on this page.</h3>
 	</div>
 </template>
 
@@ -11,10 +11,10 @@
 </script>
 
 <style scoped>
-
-h3{
-    font-size: 30px;
-    text-transform: uppercase;
-}
-
+	h3 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 20px;
+	}
 </style>

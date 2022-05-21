@@ -1,4 +1,5 @@
 <template>
+<Sidebar/>
 	<div class="form-container">
 		<div class="container">
 			<div class="forms">
@@ -35,16 +36,22 @@
 </template>
 
 <script>
-	export default {
+	import Sidebar from '../components/sidebar'
+export default {
+  components: { Sidebar },
 		name: "passwordReset",
 		data() {
-			return {};
+			return {
+				email: "",
+				password: "",
+			};
 		},
 	};
 </script>
 
 <style scoped>
 	.form-container {
+		margin-top: -970px;
 		height: 100vh;
 		display: flex;
 		align-items: center;

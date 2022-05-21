@@ -6,12 +6,8 @@
 			<FeedContent title="javelin" />
 			<FeedContent title="golf" />
 			<FeedContent title="archery" />
-			<FeedContent title="fencing" />
 			<FeedContent title="diving" />
-			<FeedContent title="boxing" />
-			<FeedContent title="handball" />
 			<FeedContent title="athletics" />
-			<FeedContent title="baseball" />
 			<FeedContent title="rugby" />
 			<FeedContent title="sailing" />
 			<FeedContent title="shooting" />

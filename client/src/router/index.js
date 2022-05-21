@@ -7,8 +7,10 @@ import signup from "@/views/signup";
 import feed from "@/views/feed";
 import notfound from "@/views/404";
 import contact from "@/views/contact";
+import issue from "@/views/issue";
+import settings from "@/views/settings";
 
-const isUserLoggedIn = false;
+// TODO:setup route navigation
 
 const routes = [
 	{
@@ -20,9 +22,6 @@ const routes = [
 		path: "/user/dashboard",
 		name: "dashboard",
 		component: dashboard,
-		meta: {
-			needAuth: true,
-		},
 	},
 	{
 		path: "/login",
@@ -48,9 +47,16 @@ const routes = [
 		path: "/user/feed",
 		name: "feed",
 		component: feed,
-		meta: {
-			needAuth: true,
-		},
+	},
+	{
+		path: "/issue",
+		name: "issue",
+		component: issue,
+	},
+	{
+		path: "/settings",
+		name: "settings",
+		component: settings,
 	},
 
 	// catch all unregistered routes
@@ -64,22 +70,6 @@ const routes = [
 const router = createRouter({
 	history: createWebHistory(process.env.BASE_URL),
 	routes,
-});
-
-// setting up protected routes
-router.beforeEach((to, from, next) => {
-	// to and from are both route objects. must call `next`.
-	if (to.meta.needAuth) {
-		if (isUserLoggedIn) {
-			next();
-		} else {
-			// restrict access and redirect to login
-			next("/login");
-		}
-	} else {
-		// grant access
-		next();
-	}
 });
 
 export default router;

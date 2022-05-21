@@ -1,4 +1,5 @@
 <template>
+	<Navbar />
 	<div class="form-container">
 		<div class="container">
 			<div class="forms">
@@ -40,8 +41,10 @@
 </template>
 
 <script>
+	import Navbar from "../components/navbar";
 	import axios from "axios";
 	export default {
+		components: { Navbar },
 		data() {
 			return {
 				email: "",
@@ -59,7 +62,6 @@
 				await axios
 					.post("/api/users/login", userData)
 					.then((response, error) => {
-						// FIXME: Get response data from the server and display it
 						if (response.data.success) {
 							this.message = response.data;
 							setTimeout(() => {
@@ -68,6 +70,8 @@
 						} else if (response.data.error) {
 							this.message = response.data;
 							this.$router.push("/login");
+						} else {
+							throw error;
 						}
 					})
 					.catch((e) => {
@@ -82,13 +86,32 @@
 
 <style scoped>
 	.form-container {
-		height: 100vh;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		position: relative;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.form-container:before {
+		content: "";
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background: url("../assets/bball.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		-webkit-background-size: cover;
+		background-size: cover;
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		filter: blur(5px);
 	}
 
 	.container {
+		margin-top: 5%;
+		background-color: rgba(255, 255, 255, 0.618);
 		position: relative;
 		width: 100%;
 		max-width: 450px;
@@ -170,6 +193,6 @@
 		cursor: pointer;
 	}
 	form {
-		height: 300px;
+		height: 260px;
 	}
 </style>

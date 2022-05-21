@@ -1,4 +1,5 @@
 <template>
+<Navbar/>
 	<div class="form-container">
 		<div class="container">
 			<div class="forms">
@@ -58,8 +59,10 @@
 </template>
 
 <script>
-	import axios from "axios";
+	import Navbar from '../components/navbar'
+import axios from "axios";
 	export default {
+  components: { Navbar },
 		name: "signup",
 		data() {
 			return {
@@ -103,13 +106,34 @@
 
 <style scoped>
 	.form-container {
-		height: 100vh;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		position: relative;
+		flex-direction: column;
+		justify-content: flex-start;
 	}
 
+.form-container:before {
+		content: "";
+		position: fixed;
+		width: 100vw;
+		height: 100%;
+		background: url("../assets/5.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		-webkit-background-size: cover;
+		background-size: contain;
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		filter: blur(5px);
+
+	}
+
+
 	.container {
+		margin-top: 6%;
+background: rgba(255, 255, 255, 0.495);
 		position: relative;
 		width: 100%;
 		max-width: 450px;

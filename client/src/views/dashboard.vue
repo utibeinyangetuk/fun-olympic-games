@@ -1,19 +1,6 @@
 <template>
 	<div class="wrapper">
-		<div class="sidebar">
-			<ul>
-				<router-link to="/user/dashboard">
-					<li class="active"><i class="uil uil-estate"></i>Home</li>
-				</router-link>
-				<router-link to="/user/feed">
-					<li><i class="uil uil-chart-line"></i>Feeds</li>
-				</router-link>
-
-				<li><i class="uil uil-exclamation-triangle"></i>Report an issue</li>
-				<li><i class="uil uil-setting"></i>Settings</li>
-			</ul>
-		</div>
-
+		<Sidebar />
 		<div class="main">
 			<div class="head">
 				<div class="head-title">
@@ -89,21 +76,21 @@
 								<li class="topic">football</li>
 								<li><a href="#">manchester derby</a></li>
 								<li><a href="#">liverpool vs real madrid</a></li>
-								<li><a href="#">23-05-2022</a></li>
-								<li><a href="#">24-05-2022</a></li>
-								<li><a href="#">25-05-2022</a></li>
-								<li><a href="#">26-05-2022</a></li>
-								<li><a href="#">27-05-2022</a></li>
-								<li><a href="#">28-05-2022</a></li>
-								<li><a href="#">29-05-2022</a></li>
-								<li><a href="#">01-06-2022</a></li>
+								<li><a href="#">arsernal vs chelsea</a></li>
+								<li><a href="#">fulham vs liverpool</a></li>
+								<li><a href="#">man u vs everton</a></li>
+								<li><a href="#">norwich vs watford</a></li>
+								<li><a href="#">lazio vs hellas verona</a></li>
+								<li><a href="#">freiburg vs bayern munich</a></li>
+								<li><a href="#">barcelona vs athletico</a></li>
+								<li><a href="#">lille vs rennes</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="balance">
 						<div class="balance-details">
 							<ul class="details">
-								<li class="topic">tennis</li>
+								<li class="topic">swimming</li>
 								<li><a href="#">21-05-2022</a></li>
 								<li><a href="#">22-05-2022</a></li>
 								<li><a href="#">23-05-2022</a></li>
@@ -137,17 +124,17 @@
 					<div class="balance">
 						<div class="balance-details">
 							<ul class="details">
-								<li class="topic">swimming</li>
-								<li><a href="#">21-05-2022</a></li>
-								<li><a href="#">22-05-2022</a></li>
-								<li><a href="#">23-05-2022</a></li>
-								<li><a href="#">24-05-2022</a></li>
-								<li><a href="#">25-05-2022</a></li>
-								<li><a href="#">26-05-2022</a></li>
-								<li><a href="#">27-05-2022</a></li>
-								<li><a href="#">28-05-2022</a></li>
-								<li><a href="#">29-05-2022</a></li>
-								<li><a href="#">01-06-2022</a></li>
+								<li class="topic">Tennis</li>
+								<li><a href="#">Florence vs Janae</a></li>
+								<li><a href="#">Monserrate vs Frederik</a></li>
+								<li><a href="#">Keenan vs Fatima</a></li>
+								<li><a href="#">Roscoe vs Daisha</a></li>
+								<li><a href="#">Orpha vs Ofelia</a></li>
+								<li><a href="#">Alyce vs Jon</a></li>
+								<li><a href="#">Kane vs Nadia</a></li>
+								<li><a href="#">Susie vs Abagail</a></li>
+								<li><a href="#">Rafael vs Aida</a></li>
+								<li><a href="#">nadal vs selena</a></li>
 							</ul>
 						</div>
 					</div>
@@ -160,8 +147,10 @@
 </template>
 
 <script>
+	import Sidebar from "../components/sidebar";
 	import axios from "axios";
 	export default {
+		components: { Sidebar },
 		name: "dashboard",
 		methods: {
 			async logout() {
@@ -185,35 +174,8 @@
 		margin: auto;
 		display: flex;
 	}
-
-	.sidebar {
-		width: 100px;
-		height: 100vh;
-		border: 1px solid rgba(0, 0, 0, 0.149);
-	}
-
-	.sidebar ul {
-		margin-top: 50px;
-	}
-
-	.sidebar ul li {
-		list-style: none;
-		text-align: center;
-		display: flex;
-		justify-content: space-evenly;
-		flex-direction: column;
-		margin-bottom: 15px;
-	}
-
-	.sidebar ul li i {
-		margin: 20px;
-		font-size: 30px;
-		cursor: pointer;
-	}
-
-	.sidebar ul li:hover,
-	li.active {
-		border-right: 5px solid #000;
+	.main {
+		background: #fea551;
 	}
 
 	.head {
@@ -252,7 +214,7 @@
 	}
 
 	.card {
-		width: 350px;
+		width: 430px;
 		height: 200px;
 		padding: 30px;
 		background: rgba(255, 255, 255, 0.21);
@@ -281,7 +243,7 @@
 	.card-icon i {
 		margin: 15px 0;
 		font-size: 25px;
-		margin-right: 15rem;
+		margin-right: 20rem;
 	}
 
 	.card span {

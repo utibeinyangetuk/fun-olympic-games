@@ -29,129 +29,722 @@
 							<button :style="btn" @click="stream">start streaming</button>
 						</template>
 					</DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-				</li>
-			</ul>
-		</Card>
-		<Card>
-			<ul>
-				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
 				</li>
 			</ul>
 		</Card>
 		<Card content="tennis">
 			<ul>
 				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
 
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
 				</li>
 			</ul>
 		</Card>
 		<Card content="javelin">
 			<ul>
 				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
 
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
 				</li>
 			</ul>
 		</Card>
 		<Card content="golf">
 			<ul>
 				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
 
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
 				</li>
 			</ul>
 		</Card>
 		<Card content="archery"> </Card>
-		<Card content="fencing">
-			<ul>
-				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
 
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-				</li>
-			</ul>
-		</Card>
 		<Card content="diving">
 			<ul>
 				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
 
-					<DataCard></DataCard>
-				</li>
-			</ul>
-		</Card>
-		<Card content="boxing">
-			<ul>
-				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-				</li>
-			</ul>
-		</Card>
-		<Card content="handball">
-			<ul>
-				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
 
-					<DataCard></DataCard>
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
 				</li>
 			</ul>
 		</Card>
+
 		<Card content="athletics">
 			<ul>
 				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
 
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
 				</li>
 			</ul>
 		</Card>
-		<Card content="baseball">
-			<ul>
-				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
 
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-				</li>
-			</ul>
-		</Card>
 		<Card content="rugby">
 			<ul>
 				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
 
-					<DataCard></DataCard>
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
 				</li>
 			</ul>
 		</Card>
@@ -169,53 +762,550 @@
 		<Card content="shooting">
 			<ul>
 				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
 
-					<DataCard></DataCard>
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
 				</li>
 			</ul>
 		</Card>
 		<Card content="wrestling">
 			<ul>
 				<li>
-					<DataCard></DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
 
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
 				</li>
 			</ul>
 		</Card>
 		<Card content="volleyball">
 			<ul>
 				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
 
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
 				</li>
 			</ul>
 		</Card>
 		<Card content="taekwondo">
 			<ul>
 				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
 				</li>
 			</ul>
 		</Card>
 		<Card content="karate">
 			<ul>
 				<li>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
-					<DataCard></DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
+					<DataCard :style="container">
+						<template #header>
+							<img
+								src="../assets/2.jpg"
+								alt="#an image will be here"
+								:style="image"
+							/>
+						</template>
+
+						<template #content>
+							<h2 :style="heading">Champions league finals</h2>
+							<p :style="time">Date: 28th-may-2022</p>
+							<p :style="time">Time: 22:00 GMT</p>
+						</template>
+
+						<template #footer>
+							<p :style="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+								magni iusto provident similique placeat vitae assumenda cumque
+								quod repudiandae facilis ab, earum quidem fugiat aut velit nisi
+								ut delectus nemo.
+							</p>
+
+							<button :style="btn" @click="stream">start streaming</button>
+						</template>
+					</DataCard>
 				</li>
 			</ul>
 		</Card>
