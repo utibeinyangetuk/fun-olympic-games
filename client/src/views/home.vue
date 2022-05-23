@@ -31,7 +31,8 @@
 		data() {
 			return {
 				bg: {
-					background: "rgba(255, 255, 255, 0.536)",
+					background: "rgba(255, 255, 255, 0.136)",
+					border:'none'
 				},
 			};
 		},
@@ -44,15 +45,15 @@
 		position: fixed;
 		width: 100vw;
 		height: 100vh;
-		background: url("../assets/3.jpg");
+		background: url("../assets/bball2.jpg");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		-webkit-background-size: cover;
 		background-size: cover;
-		-webkit-filter: blur(10px);
-		-moz-filter: blur(10px);
-		filter: blur(10px);
+		-webkit-filter: blur(6px);
+		-moz-filter: blur(6px);
+		filter: blur(6px);
 	}
 
 	section {
@@ -70,9 +71,8 @@
 	}
 
 	.info h2 {
-		color: rgba(132, 87, 5, 0.583);
+		color: #fff;
 		font-size: 25px;
-
 		margin-left: 220px;
 		text-transform: uppercase;
 		letter-spacing: 2px;
@@ -116,5 +116,8 @@
 		border-radius: 4px;
 		text-transform: uppercase;
 		cursor: pointer;
+	}
+	.info-btn p:hover {
+		background-color: rgba(0, 128, 128, 0.501);
 	}
 </style>

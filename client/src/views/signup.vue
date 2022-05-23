@@ -1,11 +1,14 @@
 <template>
-<Navbar/>
 	<div class="form-container">
+		<Navbar />
 		<div class="container">
 			<div class="forms">
 				<div class="form login">
 					<div class="message">
-						<p v-if="message">{{ message.error || message.success }}</p>
+						<p v-if="message.error != ''" :style="error">{{ message.error }}</p>
+						<p v-if="message.success != ''" :style="success">
+							{{ message.success }}
+						</p>
 					</div>
 
 					<span class="title">Signup </span>
@@ -47,7 +50,6 @@
 							/>
 							<i class="uil uil-lock"></i>
 						</div>
-
 						<div class="button">
 							<button type="submit">Signup</button>
 						</div>
@@ -59,10 +61,10 @@
 </template>
 
 <script>
-	import Navbar from '../components/navbar'
-import axios from "axios";
+	import Navbar from "../components/navbar";
+	import axios from "axios";
 	export default {
-  components: { Navbar },
+		components: { Navbar },
 		name: "signup",
 		data() {
 			return {
@@ -70,7 +72,16 @@ import axios from "axios";
 				email: "",
 				password: "",
 				confirmPassword: "",
-				message: "",
+				message: {
+					error: "",
+					success: "",
+				},
+				error: {
+					"background-color": "rgba(255, 0, 0, 0.692)",
+				},
+				success: {
+					"background-color": " rgba(32, 174, 32, 0.486)",
+				},
 			};
 		},
 		methods: {
@@ -81,19 +92,24 @@ import axios from "axios";
 					password: this.password,
 					confirmPassword: this.confirmPassword,
 				};
-
 				await axios
 					.post("/api/users/signup", userData)
 					.then((response, error) => {
-						// FIXME: Get response data from the server and display it
 						if (response.data.success) {
-							this.message = response.data;
+							// successful signup
+							this.message.success = response.data.success;
 							setTimeout(() => {
 								this.$router.push("/user/dashboard");
-							}, 3000);
+							}, 2000);
 						} else if (response.data.error) {
-							this.message = response.data;
+							// failed signup
+							this.message.error = response.data.error;
+							setTimeout(() => {
+								this.message.error = "";
+							}, 3000);
 							this.$router.push("/signup");
+						} else {
+							throw error;
 						}
 					})
 					.catch((e) => {
@@ -105,36 +121,27 @@ import axios from "axios";
 </script>
 
 <style scoped>
-	.form-container {
-		display: flex;
-		align-items: center;
-		position: relative;
-		flex-direction: column;
-		justify-content: flex-start;
-	}
-
-.form-container:before {
+	.form-container:before {
 		content: "";
 		position: fixed;
 		width: 100vw;
 		height: 100%;
-		background: url("../assets/5.jpg");
+		background: url("../assets/9.jpg");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		-webkit-background-size: cover;
-		background-size: contain;
+		background-size: cover;
 		-webkit-filter: blur(5px);
 		-moz-filter: blur(5px);
 		filter: blur(5px);
-
 	}
-
 
 	.container {
 		margin-top: 6%;
-background: rgba(255, 255, 255, 0.495);
-		position: relative;
+		background: rgba(255, 255, 255, 0.495);
+		position: absolute;
+		left: 37%;
 		width: 100%;
 		max-width: 450px;
 		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
@@ -144,6 +151,7 @@ background: rgba(255, 255, 255, 0.495);
 
 	.forms {
 		padding: 30px;
+		height: 100%;
 	}
 
 	.title {
@@ -220,5 +228,15 @@ background: rgba(255, 255, 255, 0.495);
 		font-size: 15px;
 		background: transparent;
 		cursor: pointer;
+	}
+	.message p {
+		padding: 5px 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		letter-spacing: 2px;
+		margin-bottom: 10px;
+		border-radius: 5px;
 	}
 </style>

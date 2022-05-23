@@ -49,6 +49,7 @@
 		border-radius: 5px;
 		text-transform: capitalize;
 		letter-spacing: 2px;
+		border: 1px solid rgba(128, 128, 128, 0.368);
 	}
 
 	header .navigation a:not(:last-child) {

@@ -1,14 +1,16 @@
 <template>
-	<Navbar />
 	<div class="form-container">
+		<Navbar />
 		<div class="container">
 			<div class="forms">
 				<div class="form login">
 					<div class="message">
-						<p v-if="message">{{ message.error || message.success }}</p>
+						<p v-if="message.error != ''" :style="error">{{ message.error }}</p>
+						<p v-if="message.success != ''" :style="success">
+							{{ message.success }}
+						</p>
 					</div>
 					<span class="title">LOGIN </span>
-
 					<form @submit.prevent="LOGIN">
 						<div class="input-field">
 							<input
@@ -44,12 +46,22 @@
 	import Navbar from "../components/navbar";
 	import axios from "axios";
 	export default {
+		name: "login",
 		components: { Navbar },
 		data() {
 			return {
 				email: "",
 				password: "",
-				message: "",
+				message: {
+					error: "",
+					success: "",
+				},
+				error: {
+					"background-color": "rgba(255, 0, 0, 0.692)",
+				},
+				success: {
+					"background-color": " rgba(32, 174, 32, 0.486)",
+				},
 			};
 		},
 		methods: {
@@ -58,17 +70,21 @@
 					email: this.email,
 					password: this.password,
 				};
-
 				await axios
 					.post("/api/users/login", userData)
 					.then((response, error) => {
 						if (response.data.success) {
-							this.message = response.data;
+							// successful login
+							this.message.success = response.data.success;
 							setTimeout(() => {
 								this.$router.push("/user/dashboard");
-							}, 3000);
+							}, 2000);
 						} else if (response.data.error) {
-							this.message = response.data;
+							// failed login
+							this.message.error = response.data.error;
+							setTimeout(() => {
+								this.message.error = "";
+							}, 3000);
 							this.$router.push("/login");
 						} else {
 							throw error;
@@ -78,27 +94,20 @@
 						throw e;
 					});
 			},
+			mounted() {
+				this.message = "";
+			},
 		},
-
-		name: "login",
 	};
 </script>
 
 <style scoped>
-	.form-container {
-		display: flex;
-		align-items: center;
-		position: relative;
-		flex-direction: column;
-		justify-content: flex-start;
-	}
-
 	.form-container:before {
 		content: "";
 		position: fixed;
 		width: 100vw;
 		height: 100vh;
-		background: url("../assets/bball.jpg");
+		background: url("../assets/3.jpg");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
@@ -110,9 +119,10 @@
 	}
 
 	.container {
-		margin-top: 5%;
-		background-color: rgba(255, 255, 255, 0.618);
-		position: relative;
+		margin-top: 7%;
+		background-color: rgba(255, 255, 255, 0.868);
+		position: absolute;
+		left: 37%;
 		width: 100%;
 		max-width: 450px;
 		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
@@ -122,6 +132,7 @@
 
 	.forms {
 		padding: 30px;
+		height: 100%;
 	}
 
 	.title {
@@ -143,7 +154,7 @@
 	}
 
 	.input-field {
-		margin-top: 50px;
+		margin-top: 30px;
 		position: relative;
 		width: 95%;
 		height: 50px;
@@ -158,12 +169,12 @@
 		outline: none;
 		border-bottom: 1px solid #000;
 		font-size: 14px;
-		transition: all 2s ease-in-out;
 		background: transparent;
 	}
 
 	.input-field input::placeholder {
 		color: rgba(17, 15, 15, 0.506);
+		letter-spacing: 2px;
 	}
 
 	.input-field i {
@@ -192,7 +203,15 @@
 		background: transparent;
 		cursor: pointer;
 	}
-	form {
-		height: 260px;
+
+	.message p {
+		padding: 5px 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		letter-spacing: 2px;
+		margin-bottom: 10px;
+		border-radius: 5px;
 	}
 </style>
