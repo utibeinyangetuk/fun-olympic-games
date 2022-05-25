@@ -63,9 +63,7 @@
 				<div class="head">
 					<div class="head-title">
 						<h2>🔥Trending Games🔥</h2>
-						<span
-							>Here are some of the hottest games going on right now...</span
-						>
+						<span>Here are some of the hottest games going on right now...</span>
 					</div>
 				</div>
 
@@ -91,16 +89,7 @@
 						<div class="balance-details">
 							<ul class="details">
 								<li class="topic">swimming</li>
-								<li><a href="#">21-05-2022</a></li>
-								<li><a href="#">22-05-2022</a></li>
-								<li><a href="#">23-05-2022</a></li>
-								<li><a href="#">24-05-2022</a></li>
-								<li><a href="#">25-05-2022</a></li>
-								<li><a href="#">26-05-2022</a></li>
-								<li><a href="#">27-05-2022</a></li>
-								<li><a href="#">28-05-2022</a></li>
-								<li><a href="#">29-05-2022</a></li>
-								<li><a href="#">01-06-2022</a></li>
+								<li><b>No available content.</b></li>
 							</ul>
 						</div>
 					</div>
@@ -108,16 +97,8 @@
 						<div class="balance-details">
 							<ul class="details">
 								<li class="topic">basket ball</li>
-								<li><a href="#">21-05-2022</a></li>
-								<li><a href="#">22-05-2022</a></li>
-								<li><a href="#">23-05-2022</a></li>
-								<li><a href="#">24-05-2022</a></li>
-								<li><a href="#">25-05-2022</a></li>
-								<li><a href="#">26-05-2022</a></li>
-								<li><a href="#">27-05-2022</a></li>
-								<li><a href="#">28-05-2022</a></li>
-								<li><a href="#">29-05-2022</a></li>
-								<li><a href="#">01-06-2022</a></li>
+								<li><a href="#">celtic vs lakers</a></li>
+								<li><a href="#">NBA finals highlight</a></li>
 							</ul>
 						</div>
 					</div>
@@ -150,8 +131,9 @@
 	import Sidebar from "../components/sidebar";
 	import axios from "axios";
 	export default {
-		components: { Sidebar },
 		name: "dashboard",
+		components: { Sidebar },
+
 		methods: {
 			async logout() {
 				await axios
@@ -173,9 +155,10 @@
 	.wrapper {
 		margin: auto;
 		display: flex;
+		background: url("../assets/5.jpg");
 	}
 	.main {
-		background: #fea551;
+		background: url("../assets/5.jpg");
 	}
 
 	.head {
@@ -184,6 +167,7 @@
 	}
 	.head h2 {
 		letter-spacing: 2px;
+		color: #fff;
 	}
 
 	.logout {
@@ -193,7 +177,7 @@
 
 	.logout button {
 		padding: 10px 40px;
-		color: #000;
+		color: rgba(255, 255, 255, 0.675);
 		border: none;
 		border-radius: 5px;
 		font-size: 20px;
@@ -205,6 +189,7 @@
 	}
 
 	.logout button:hover {
+		color: red;
 		box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 	}
 
@@ -217,7 +202,7 @@
 		width: 430px;
 		height: 200px;
 		padding: 30px;
-		background: rgba(255, 255, 255, 0.21);
+		background: rgba(255, 255, 255, 0.407);
 		margin-right: 8px;
 		border-radius: 5px;
 		box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
@@ -263,8 +248,9 @@
 		display: flex;
 		justify-content: center;
 		width: 437px;
+		min-height: 420px;
 		margin: 20px 0px 0px 45px;
-		background: rgba(255, 255, 255, 0.21);
+		background: rgba(255, 255, 255, 0.407);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 		padding: 20px 30px;
 		border-radius: 5px;
@@ -273,9 +259,10 @@
 	.topic {
 		font-size: 20px;
 		font-weight: bold;
-		text-transform: uppercase;
+		text-transform: capitalize;
 		letter-spacing: 2px;
 		text-decoration: underline;
+		color: #fff;
 	}
 
 	.balance-details li {
@@ -292,6 +279,6 @@
 
 	.balance-details li a:hover {
 		text-decoration: underline;
-		color: palevioletred;
+		color: #fff;
 	}
 </style>

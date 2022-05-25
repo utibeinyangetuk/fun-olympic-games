@@ -12,9 +12,6 @@
 			<FeedContent title="sailing" />
 			<FeedContent title="shooting" />
 			<FeedContent title="volleyball" />
-			<FeedContent title="wrestling" />
-			<FeedContent title="taekwondo" />
-			<FeedContent title="karate" />
 		</FeedTab>
 	</div>
 </template>
@@ -23,12 +20,10 @@
 	import FeedContent from "../components/feedContent";
 	import FeedTab from "../components/feedTab";
 	export default {
+		name: "feed",
 		components: {
 			FeedContent,
 			FeedTab,
 		},
-		name: "feed",
 	};
 </script>
-
-<style scoped></style>

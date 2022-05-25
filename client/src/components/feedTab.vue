@@ -31,11 +31,12 @@
 </script>
 <style scoped>
 	.tabs {
+		height: 100vh;
 		margin: 0 auto;
+		background: whitesmoke;
 	}
 
 	.header {
-		margin-top: 30px;
 		padding: 0;
 		display: flex;
 	}
@@ -45,16 +46,13 @@
 		height: 50px;
 		text-align: center;
 		padding: 10px 20px;
-
 		cursor: pointer;
 		font-size: 14px;
 		font-weight: 700;
 		letter-spacing: 2px;
 		transition: 0.8s all ease-in-out;
-
 		color: #000;
 		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-
 		text-transform: capitalize;
 	}
 
@@ -63,8 +61,8 @@
 		border-bottom: none;
 		background: rgba(236, 224, 224, 0.149);
 		box-shadow: none;
-
-		/*`   border: 1px solid;
-        border-bottom: 1px solid #fff;  */
+		border-radius: 5px;
+		border: 1px solid;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 	}
 </style>

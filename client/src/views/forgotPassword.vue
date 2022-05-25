@@ -1,5 +1,4 @@
 <template>
-<Sidebar/>
 	<div class="form-container">
 		<div class="container">
 			<div class="forms">
@@ -8,11 +7,7 @@
 
 					<form>
 						<div class="input-field">
-							<input
-								type="text"
-								placeholder="Enter your email"
-								v-model="email"
-							/>
+							<input type="text" placeholder="Enter your email" v-model="email" />
 							<i class="uil uil-envelope"></i>
 						</div>
 
@@ -36,9 +31,7 @@
 </template>
 
 <script>
-	import Sidebar from '../components/sidebar'
-export default {
-  components: { Sidebar },
+	export default {
 		name: "passwordReset",
 		data() {
 			return {
@@ -51,7 +44,6 @@ export default {
 
 <style scoped>
 	.form-container {
-		margin-top: -970px;
 		height: 100vh;
 		display: flex;
 		align-items: center;

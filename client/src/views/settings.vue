@@ -11,5 +11,3 @@
 		name: "settings",
 	};
 </script>
-
-<style scoped></style>
