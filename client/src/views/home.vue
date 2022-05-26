@@ -6,11 +6,11 @@
 			<h2>welcome to the <br /></h2>
 			<span>Fun olympic games 2022.</span>
 			<p :style="bg">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorum
-				nihil ea ipsa labore molestias earum. Totam, magnam eius at consequuntur
-				commodi reiciendis, cum ducimus quam officiis id a iusto! Lorem ipsum
-				dolor sit amet consectetur adipisicing elit. Vitae dolorum consequuntur
-				commodi reiciendis, cum ducimus quam officiis id a iusto!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorum nihil ea
+				ipsa labore molestias earum. Totam, magnam eius at consequuntur commodi
+				reiciendis, cum ducimus quam officiis id a iusto! Lorem ipsum dolor sit amet
+				consectetur adipisicing elit. Vitae dolorum consequuntur commodi reiciendis, cum
+				ducimus quam officiis id a iusto!
 			</p>
 			<div class="info-btn">
 				<router-link to="/signup">
@@ -31,8 +31,9 @@
 		data() {
 			return {
 				bg: {
-					background: "rgba(255, 255, 255, 0.136)",
-					border:'none'
+					background: "rgba(0, 0, 0, 0.57)",
+					border: "1px solid gray",
+					color: "#fff",
 				},
 			};
 		},
@@ -45,7 +46,7 @@
 		position: fixed;
 		width: 100vw;
 		height: 100vh;
-		background: url("../assets/bball2.jpg");
+		background: url("../assets/bball.jpg");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
@@ -82,7 +83,7 @@
 	}
 
 	.info span {
-		color: #000;
+		color: #fff;
 		font-weight: 700;
 		font-size: 45px;
 		margin-left: 25px;
@@ -97,8 +98,7 @@
 		width: 700px;
 		font-size: 20px;
 		color: #000;
-		box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
-		border: 1px solid rgba(236, 224, 224, 0.498);
+		border: 1px solid #000;
 		box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.027);
 		margin-bottom: 20px;
 		border-radius: 5px;
@@ -118,6 +118,7 @@
 		cursor: pointer;
 	}
 	.info-btn p:hover {
-		background-color: rgba(0, 128, 128, 0.501);
+		background-color: rgba(0, 0, 0, 0.57);
+		color: #fff;
 	}
 </style>

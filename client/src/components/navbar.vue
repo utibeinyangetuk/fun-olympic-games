@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<header>
-			<h2 class="logo">✨FOG-2022✨</h2>
+			<h2 class="logo">✨FOG2022✨</h2>
 			<div class="navigation animate__animated animate__fadeInRight">
 				<router-link to="/"> Home </router-link>
 				<router-link to="/contact-us"> contact us </router-link>

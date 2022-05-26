@@ -44,7 +44,7 @@
 		justify-content: space-evenly;
 		flex-direction: column;
 		margin-bottom: 15px;
-		color:#fff
+		color: #000;
 	}
 
 	.sidebar ul li i {
@@ -54,6 +54,6 @@
 	}
 
 	.sidebar ul li:hover {
-		border-right: 5px solid #fff;
+		color: rgb(3, 3, 142);
 	}
 </style>

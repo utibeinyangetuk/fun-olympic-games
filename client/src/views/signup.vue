@@ -132,9 +132,9 @@
 		background-attachment: fixed;
 		-webkit-background-size: cover;
 		background-size: cover;
-		-webkit-filter: blur(5px);
-		-moz-filter: blur(5px);
-		filter: blur(5px);
+		-webkit-filter: blur(7px);
+		-moz-filter: blur(7px);
+		filter: blur(7px);
 	}
 
 	.container {
@@ -194,11 +194,6 @@
 	.input-field input::placeholder {
 		color: rgba(17, 15, 15, 0.506);
 	}
-
-	.input-field input:is(:focus, :valid) {
-		border-bottom-color: green;
-	}
-
 	.input-field i {
 		position: absolute;
 		top: 50%;
@@ -206,10 +201,6 @@
 		transform: translateY(-50%);
 		color: #000;
 		font-size: 23px;
-	}
-
-	.input-field input:is(:focus, :valid) ~ i {
-		color: green;
 	}
 
 	.button {

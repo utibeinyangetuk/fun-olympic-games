@@ -22,7 +22,7 @@
 
 						<span>Ongoing Games...</span>
 						<div class="button">
-							<button>view</button>
+							<button @click="message">view</button>
 						</div>
 					</div>
 					<div class="card">
@@ -33,7 +33,7 @@
 
 						<span>Ongoing Games...</span>
 						<div class="button">
-							<button>view</button>
+							<button @click="message">view</button>
 						</div>
 					</div>
 					<div class="card">
@@ -44,7 +44,7 @@
 
 						<span>Ongoing Games...</span>
 						<div class="button">
-							<button>view</button>
+							<button @click="message">view</button>
 						</div>
 					</div>
 					<div class="card">
@@ -55,7 +55,7 @@
 
 						<span>Ongoing Games...</span>
 						<div class="button">
-							<button>view</button>
+							<button @click="message">view</button>
 						</div>
 					</div>
 				</div>
@@ -72,16 +72,16 @@
 						<div class="balance-details">
 							<ul class="details">
 								<li class="topic">football</li>
-								<li><a href="#">manchester derby</a></li>
-								<li><a href="#">liverpool vs real madrid</a></li>
-								<li><a href="#">arsernal vs chelsea</a></li>
-								<li><a href="#">fulham vs liverpool</a></li>
-								<li><a href="#">man u vs everton</a></li>
-								<li><a href="#">norwich vs watford</a></li>
-								<li><a href="#">lazio vs hellas verona</a></li>
-								<li><a href="#">freiburg vs bayern munich</a></li>
-								<li><a href="#">barcelona vs athletico</a></li>
-								<li><a href="#">lille vs rennes</a></li>
+								<li><a href="https://www.youtube.com/">manchester derby</a></li>
+								<li><a href="https://www.youtube.com/">liverpool vs real madrid</a></li>
+								<li><a href="https://www.youtube.com/">arsernal vs chelsea</a></li>
+								<li><a href="https://www.youtube.com/">fulham vs liverpool</a></li>
+								<li><a href="https://www.youtube.com/">man u vs everton</a></li>
+								<li><a href="https://www.youtube.com/">norwich vs watford</a></li>
+								<li><a href="https://www.youtube.com/">lazio vs hellas verona</a></li>
+								<li><a href="https://www.youtube.com/">freiburg vs bayern munich</a></li>
+								<li><a href="https://www.youtube.com/">barcelona vs athletico</a></li>
+								<li><a href="https://www.youtube.com/">lille vs rennes</a></li>
 							</ul>
 						</div>
 					</div>
@@ -97,8 +97,8 @@
 						<div class="balance-details">
 							<ul class="details">
 								<li class="topic">basket ball</li>
-								<li><a href="#">celtic vs lakers</a></li>
-								<li><a href="#">NBA finals highlight</a></li>
+								<li><a href="https://www.youtube.com/">celtic vs lakers</a></li>
+								<li><a href="https://www.youtube.com/">NBA finals highlight</a></li>
 							</ul>
 						</div>
 					</div>
@@ -106,16 +106,16 @@
 						<div class="balance-details">
 							<ul class="details">
 								<li class="topic">Tennis</li>
-								<li><a href="#">Florence vs Janae</a></li>
-								<li><a href="#">Monserrate vs Frederik</a></li>
-								<li><a href="#">Keenan vs Fatima</a></li>
-								<li><a href="#">Roscoe vs Daisha</a></li>
-								<li><a href="#">Orpha vs Ofelia</a></li>
-								<li><a href="#">Alyce vs Jon</a></li>
-								<li><a href="#">Kane vs Nadia</a></li>
-								<li><a href="#">Susie vs Abagail</a></li>
-								<li><a href="#">Rafael vs Aida</a></li>
-								<li><a href="#">nadal vs selena</a></li>
+								<li><a href="https://www.youtube.com/">Florence vs Janae</a></li>
+								<li><a href="https://www.youtube.com/">Monserrate vs Frederik</a></li>
+								<li><a href="https://www.youtube.com/">Keenan vs Fatima</a></li>
+								<li><a href="https://www.youtube.com/">Roscoe vs Daisha</a></li>
+								<li><a href="https://www.youtube.com/">Orpha vs Ofelia</a></li>
+								<li><a href="https://www.youtube.com/">Alyce vs Jon</a></li>
+								<li><a href="https://www.youtube.com/">Kane vs Nadia</a></li>
+								<li><a href="https://www.youtube.com/">Susie vs Abagail</a></li>
+								<li><a href="https://www.youtube.com/">Rafael vs Aida</a></li>
+								<li><a href="https://www.youtube.com/">nadal vs selena</a></li>
 							</ul>
 						</div>
 					</div>
@@ -147,6 +147,9 @@
 						throw err;
 					});
 			},
+			message() {
+				alert("Games cannot be accessed at the moment.");
+			},
 		},
 	};
 </script>
@@ -155,10 +158,10 @@
 	.wrapper {
 		margin: auto;
 		display: flex;
-		background: url("../assets/5.jpg");
+		background: url("../assets/9.jpg");
 	}
 	.main {
-		background: url("../assets/5.jpg");
+		background: url("../assets/9.jpg");
 	}
 
 	.head {
@@ -167,7 +170,7 @@
 	}
 	.head h2 {
 		letter-spacing: 2px;
-		color: #fff;
+		color: rgb(3, 3, 142);
 	}
 
 	.logout {
@@ -177,20 +180,15 @@
 
 	.logout button {
 		padding: 10px 40px;
-		color: rgba(255, 255, 255, 0.675);
+		color: red;
 		border: none;
 		border-radius: 5px;
 		font-size: 20px;
 		border: 1px solid;
-		box-shadow: none;
+		box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 		transition: all ease-in 1s;
 		font-weight: bold;
 		background: transparent;
-	}
-
-	.logout button:hover {
-		color: red;
-		box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 	}
 
 	.card-board {
@@ -262,7 +260,7 @@
 		text-transform: capitalize;
 		letter-spacing: 2px;
 		text-decoration: underline;
-		color: #fff;
+		color: rgb(3, 3, 142);
 	}
 
 	.balance-details li {
@@ -279,6 +277,6 @@
 
 	.balance-details li a:hover {
 		text-decoration: underline;
-		color: #fff;
+		color: rgb(133, 9, 125);
 	}
 </style>
