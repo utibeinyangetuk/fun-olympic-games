@@ -10,8 +10,6 @@ import contact from "@/views/contact";
 import issue from "@/views/issue";
 import settings from "@/views/settings";
 
-// TODO:setup route navigation
-
 const routes = [
 	{
 		path: "/",
