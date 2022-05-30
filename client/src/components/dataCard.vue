@@ -26,7 +26,7 @@
 		height: 400px;
 		margin-bottom: 10px;
 		border-radius: 5px;
-		box-shadow: 0 2px 4px 3px rgba(0, 0, 0, 0.1);
+		border: 1px solid rgba(0, 0, 0, 0.1);
 	}
 
 	.card:hover {

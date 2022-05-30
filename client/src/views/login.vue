@@ -14,7 +14,7 @@
 					<form @submit.prevent="LOGIN">
 						<div class="input-field">
 							<input
-								type="text"
+								type="email"
 								placeholder="Enter your email"
 								v-model="email"
 								required

@@ -4,7 +4,7 @@
 	<div class="contact-box">
 		<form>
 			<h2 class="heading">contact us</h2>
-			<input type="text" class="input-field" placeholder="Your email" />
+			<input type="email" class="input-field" placeholder="Your email" />
 			<input type="text" class="input-field" placeholder="Message heading" />
 			<textarea
 				class="input-field textarea"

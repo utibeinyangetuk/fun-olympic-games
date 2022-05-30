@@ -25,7 +25,7 @@
 						</div>
 						<div class="input-field">
 							<input
-								type="text"
+								type="email"
 								placeholder="Enter your email"
 								required
 								v-model="email"

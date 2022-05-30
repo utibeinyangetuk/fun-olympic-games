@@ -30,8 +30,8 @@
 	}
 
 	.btn {
-		background: gray;
-		color: #fff;
+		color:#000;
+		border: 1px solid;
 		padding: 10px 20px;
 		font-size: 20px;
 		font-weight: bold;

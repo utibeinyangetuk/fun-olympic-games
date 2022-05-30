@@ -33,7 +33,8 @@
 	.tabs {
 		height: 100vh;
 		margin: 0 auto;
-		background: whitesmoke;
+		margin-top: 5px;
+		overflow: hidden;
 	}
 
 	.header {
@@ -52,17 +53,16 @@
 		letter-spacing: 2px;
 		transition: 0.8s all ease-in-out;
 		color: #000;
-		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+		border-radius: 5px;
 		text-transform: capitalize;
+		margin-right: 5px;
 	}
 
 	.header li.active {
 		border: 1px solid rgba(128, 128, 128, 0.415);
-		border-bottom: none;
 		background: rgba(236, 224, 224, 0.149);
 		box-shadow: none;
 		border-radius: 5px;
-		border: 1px solid;
-		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 	}
 </style>
