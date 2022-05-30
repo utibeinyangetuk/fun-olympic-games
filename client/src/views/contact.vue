@@ -1,9 +1,9 @@
 <template>
-	<Navbar/>
+	<Navbar />
 
 	<div class="contact-box">
 		<form>
-		<h2 class="heading">contact us</h2>
+			<h2 class="heading">contact us</h2>
 			<input type="text" class="input-field" placeholder="Your email" />
 			<input type="text" class="input-field" placeholder="Message heading" />
 			<textarea
@@ -19,9 +19,9 @@
 </template>
 
 <script>
-	import Navbar from '../components/navbar'
-export default {
-  components: { Navbar },
+	import Navbar from "../components/navbar";
+	export default {
+		components: { Navbar },
 		name: "contactUs",
 	};
 </script>
@@ -30,7 +30,7 @@ export default {
 	.contact-box {
 		background-color: #fff;
 		width: 500px;
-		box-shadow: 0 0 5px 0 #999;
+		border: 1px solid rgba(153, 153, 153, 0.303);
 		position: absolute;
 		left: 50%;
 		top: 50%;
@@ -40,7 +40,7 @@ export default {
 	form {
 		margin: 35px;
 	}
-	.heading{
+	.heading {
 		text-decoration: underline;
 	}
 	.input-field {
