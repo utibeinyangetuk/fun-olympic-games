@@ -54,7 +54,7 @@ const authenticateuser = (email, password, done) => {
 				}
 			});
 		} else {
-			return done(null, false, { message: "Email does not exist." });
+			return done(null, false, { message: "This email does not exist." });
 		}
 	});
 };
@@ -91,16 +91,16 @@ app.post("/api/users/login", async (req, res, next) => {
 		// throw error if credentials are wrong
 		if (!user) {
 			console.log("Bad Credentials");
-			return res.send({ error: "Invalid email or password" });
+			return res.send({ error: "Incorrect email or password" });
 		} else {
-			res.send({ success: "you have been logged in" });
+			res.send({ success: "Login successful" });
 		}
 	})(req, res, next);
 });
 
 // signup route
 app.post("/api/users/signup", async (req, res) => {
-	let { username, email, password, confirmPassword } = req.body;
+	let { username, email, password } = req.body;
 	console.log(req.body);
 	try {
 		let hashedPassword = await bcrypt.hash(password, 10);
@@ -114,7 +114,7 @@ app.post("/api/users/signup", async (req, res) => {
 					throw error;
 				} else {
 					if (results.rows.length > 0) {
-						res.send({ error: " Email already exist." });
+						res.send({ error: " This email already exist." });
 					} else {
 						pool.query(
 							// if user doesn't exist, then register the user
