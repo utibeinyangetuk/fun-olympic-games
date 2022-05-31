@@ -54,6 +54,6 @@
 	}
 
 	.sidebar ul li:hover {
-		color: rgb(3, 3, 142);
+		color: rgb(133, 9, 125);
 	}
 </style>

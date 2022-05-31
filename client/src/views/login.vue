@@ -57,7 +57,7 @@
 					success: "",
 				},
 				error: {
-					"background-color": "rgba(255, 0, 0, 0.692)",
+					"background-color": "rgba(255, 0, 0, 0.492)",
 				},
 				success: {
 					"background-color": " rgba(32, 174, 32, 0.486)",

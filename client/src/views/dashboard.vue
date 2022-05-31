@@ -63,7 +63,7 @@
 				<div class="head">
 					<div class="head-title">
 						<h2>🔥Trending Games🔥</h2>
-						<span>Here are some of the hottest games going on right now...</span>
+						<span>Here are some of the hottest games going on right now⬇️</span>
 					</div>
 				</div>
 
@@ -154,13 +154,31 @@
 </script>
 
 <style scoped>
+	.head-title span {
+		margin-left: 20px;
+		font-weight: bold;
+	}
 	.wrapper {
 		margin: auto;
 		display: flex;
-		background: url("../assets/9.jpg");
+		background: rgb(185, 183, 215);
+		background: linear-gradient(
+			90deg,
+			rgba(185, 183, 215, 1) 0%,
+			rgba(247, 247, 247, 1) 41%,
+			rgba(245, 245, 245, 0.7931547619047619) 100%,
+			rgba(0, 212, 255, 1) 100%
+		);
 	}
 	.main {
-		background: url("../assets/9.jpg");
+		background: rgb(185, 183, 215);
+		background: linear-gradient(
+			90deg,
+			rgba(185, 183, 215, 1) 0%,
+			rgba(247, 247, 247, 1) 41%,
+			rgba(245, 245, 245, 0.7931547619047619) 100%,
+			rgba(0, 212, 255, 1) 100%
+		);
 	}
 
 	.head {
@@ -172,22 +190,20 @@
 		color: rgb(3, 3, 142);
 	}
 
-	.logout {
-		width: 400px;
-		margin-left: 70%;
-	}
-
 	.logout button {
-		padding: 10px 40px;
-		color: red;
-		border: none;
-		border-radius: 5px;
-		font-size: 20px;
-		border: 1px solid;
-		box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
-		transition: all ease-in 1s;
+		background: rgba(255, 0, 0, 0.587);
+		position: absolute;
+		left: 80%;
+		width: 150px;
+		height: 50px;
 		font-weight: bold;
-		background: transparent;
+		font-size: 20px;
+		color: #fff;
+		letter-spacing: 2px;
+		border: 1px solid red;
+		border-radius: 5px;
+		cursor: pointer;
+		box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
 	}
 
 	.card-board {
@@ -272,6 +288,7 @@
 		color: rgba(0, 0, 0, 0.277);
 		font-weight: bold;
 		text-decoration: none;
+		text-transform: capitalize;
 	}
 
 	.balance-details li a:hover {
