@@ -50,10 +50,12 @@ const authenticateuser = (email, password, done) => {
 				if (isMatch) {
 					return done(null, user);
 				} else {
+					console.log("password is incorrect");
 					return done(null, false, { message: "Password is incorrect." });
 				}
 			});
 		} else {
+			console.log("Email does not exist");
 			return done(null, false, { message: "This email does not exist." });
 		}
 	});
@@ -90,7 +92,7 @@ app.post("/api/users/login", async (req, res, next) => {
 		}
 		// throw error if credentials are wrong
 		if (!user) {
-			console.log("Bad Credentials");
+			console.log("invalid Credentials");
 			return res.send({ error: "Incorrect email or password" });
 		} else {
 			res.send({ success: "Login successful" });
@@ -124,6 +126,7 @@ app.post("/api/users/signup", async (req, res) => {
 								if (err) {
 									throw err;
 								}
+								console.log("Registration successful");
 								res.send({
 									success: "Registration successful.",
 								});
@@ -145,7 +148,7 @@ app.get("/api/user/logout", function (req, res) {
 	res.send("you have been logged out");
 });
 
-// start the server
+// setup the server
 app.listen(process.env.PORT, () => {
 	console.log(`server running on http://localhost:${process.env.PORT}/`);
 });

@@ -2,19 +2,19 @@
 	<div class="sidebar">
 		<ul>
 			<router-link to="/user/dashboard">
-				<li><i class="uil uil-estate"></i>Home</li>
+				<li><i class="uil uil-estate" />Home</li>
 			</router-link>
 
 			<router-link to="/user/feed">
-				<li><i class="uil uil-chart-line"></i>Feeds</li>
+				<li><i class="uil uil-chart-line" />Feeds</li>
 			</router-link>
 
 			<router-link to="/issue">
-				<li><i class="uil uil-exclamation-triangle"></i>Report an issue</li>
+				<li><i class="uil uil-exclamation-triangle" /> issues</li>
 			</router-link>
 
 			<router-link to="/settings">
-				<li><i class="uil uil-setting"></i>Settings</li>
+				<li><i class="uil uil-setting" />Settings</li>
 			</router-link>
 		</ul>
 	</div>
