@@ -63,7 +63,7 @@
 				<div class="head">
 					<div class="head-title">
 						<h2>🔥Trending Games🔥</h2>
-						<span>Here are some of the hottest games going on right now⬇️</span>
+						<span>Here are some of the hottest games for today...⬇️</span>
 					</div>
 				</div>
 
@@ -187,7 +187,7 @@
 	}
 	.head h2 {
 		letter-spacing: 2px;
-		color: rgb(3, 3, 142);
+		color: #000;
 	}
 
 	.logout button {
@@ -275,7 +275,7 @@
 		text-transform: capitalize;
 		letter-spacing: 2px;
 		text-decoration: underline;
-		color: rgb(3, 3, 142);
+		color: #000;
 	}
 
 	.balance-details li {
